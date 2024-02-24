@@ -4,6 +4,7 @@ using namespace std;
 
 int main() {
   //Create a number accumulator that adds any amount of numbers you choose
+  //I set the number and total to double to be able to handle large decimals as well
   double number;
   int counterMax;
   double total = 0;
