@@ -134,3 +134,22 @@ int findLowest(const GradeType array, int size)
     return lowest;
 }
  
+//Output:
+
+//  Please input a grade from 1 to 100, (or -99 to stop)
+// 90
+// Input another grade or -99 to stop
+// 45
+// Input another grade or -99 to stop
+// 73
+// Input another grade or -99 to stop
+// 62
+// Input another grade or -99 to stop
+// -99
+
+// The average of all the grades is 67.5
+
+// The highest grade is 90
+
+// The lowest grade is 45
+
