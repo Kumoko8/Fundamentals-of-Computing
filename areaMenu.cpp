@@ -40,30 +40,51 @@ int main()
     {
         cout << " Enter the radius of the circle ";
         cin >> radius;
-        circ_area = PI * radius * radius;
-        cout << " The area of the circle is " << circ_area << endl;
+        if ( radius > 0) {
+
+            circ_area = PI * radius * radius;
+            cout << " The area of the circle is " << circ_area << endl;
+        }
+        else {
+            cout << " Positive numbers only. Try again.";
+        }
     }
     else if (user_choice == 2)
     {
         cout << " Enter the length of the rectangle";
         cin >> rect_length;
-        cout << " Enter the width of the rectangle";
-        cin >> rect_width;
-        rect_area = rect_length * rect_width;
-        cout << "  The area of the rectangle is " << rect_area << endl;
+        if(rect_length > 0){
+
+            cout << " Enter the width of the rectangle";
+            cin >> rect_width;
+            rect_area = rect_length * rect_width;
+            cout << "  The area of the rectangle is " << rect_area << endl;
+        }
+         else {
+            cout << " Positive numbers only. Try again.";
+        }
     }
     else if (user_choice == 3)
     {
         cout << " Enter the base of the triangle";
         cin >> tri_base;
-        cout << " Enter the height of the triangle";
-        cin >> tri_height;
-        tri_area = tri_base * tri_height / 2;
-        cout << "  The area of the triangle is " << tri_area << endl;
+        if(tri_base > 0){
+
+            cout << " Enter the height of the triangle";
+            cin >> tri_height;
+            tri_area = tri_base * tri_height / 2;
+            cout << "  The area of the triangle is " << tri_area << endl;
+        }
+         else {
+            cout << " Positive numbers only. Try again.";
+        }
     }
     else if (user_choice != 4)
     {
         cout << " Invalid option. Please choose an option 1 -4. Restart program";
     }
+     
+        cout << " Goodbye.";
+
     return 0;
 }
