@@ -2,7 +2,8 @@
 #include <iomanip>
 using namespace std;
 
-int main(){
+int main()
+{
 
     int spoolNumber;
     double spoolStock;
@@ -12,8 +13,6 @@ int main(){
     double totalShipping;
     double orderTotal;
 
-
-
     int spoolPrice = 100;
     int shipFee = 10;
 
@@ -21,7 +20,8 @@ int main(){
     cout << "Enter the number of spools ordered ";
     cin >> spoolNumber;
 
-    while(spoolNumber < 1){
+    while (spoolNumber < 1)
+    {
         cout << "Enter a number greater than 1 for spools ordered";
         cin >> spoolNumber;
     }
@@ -29,7 +29,8 @@ int main(){
     cout << "Enter the number of spools in stock ";
     cin >> spoolStock;
 
-    while(spoolStock < 0){
+    while (spoolStock < 0)
+    {
         cout << "Enter a positive number for spools in stock please";
         cin >> spoolStock;
     }
@@ -37,19 +38,21 @@ int main(){
     cout << "Enter any additional shipping and handling costs (above the default $10) ";
     cin >> extraShipping;
 
-    while(extraShipping < 0){
+    while (extraShipping < 0)
+    {
         cout << "Please enter a positive amount for extra shipping or 0 for none.";
         cin >> extraShipping;
-
     }
 
-    cout << "The number of spools ordered is: " << spoolNumber  << endl;
-    cout << "There are " << spoolStock - spoolNumber <<  " spools left in stock ";
+    cout << "The number of spools ordered is: " << spoolNumber << endl;
+    cout << "There are " << spoolStock - spoolNumber << " spools left in stock ";
 
-    if(spoolNumber > spoolStock){
+    if (spoolNumber > spoolStock)
+    {
         cout << "There are " << spoolNumber - spoolStock << "spools on backorder ";
     }
-    else {
+    else
+    {
         cout << "There are no spools on backorder right now. ";
     }
 
@@ -61,9 +64,4 @@ int main(){
 
     orderTotal = baseSpoolPrice + totalShipping;
     cout << "The order total is " << orderTotal;
-
-
 }
-
-
-
