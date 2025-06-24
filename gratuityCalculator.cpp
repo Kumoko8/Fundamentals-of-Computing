@@ -6,6 +6,12 @@ using namespace std;
 class Tips
 {
 
+private:
+    double taxRate = 0.085;
+    double totalBill;
+    double tipRate;
+    double totalTip;
+
 public:
     // tax rate constructor
 
@@ -14,14 +20,25 @@ public:
         taxRate = r;
     }
 
-    void computeTip(totalBill, tipRate)
+    double computeTip(double totalBill, double tipRate)
     {
         totalTip = totalBill * tipRate;
+
+        return totalTip;
     }
 };
 
 int main()
 {
 
-    return 0;
+    cout << "Enter the total bill amount";
+    cin >> totalBill;
+
+    cout << "Enter the tax rate";
+    cin >> taxRate;
+
+    cout << "Enter the tip rate";
+    cin >> tipRate;
+
+        return 0;
 }
