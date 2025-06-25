@@ -40,5 +40,5 @@ int main()
     cout << "Enter the tip rate";
     cin >> tipRate;
 
-        return 0;
+    return 0;
 }
