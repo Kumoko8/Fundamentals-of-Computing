@@ -11,6 +11,11 @@ int main()
     {
         cout << "Enter number of " << salsaNames[i] << " jars sold ";
         cin >> salsaAmounts[i];
+
+        while(salsaAmounts[i] < 0) {
+            cout << "Please enter a positive number for the amounts sold ";
+            cin >> salsaAmounts[i];
+        }
     }
 
     cout << "The sales for each are: " << endl;
@@ -18,6 +23,8 @@ int main()
     {
         cout << salsaAmounts[i] << " " << salsaNames[i] << " jars" << endl;
     }
+
+
 
     return 0;
 }
