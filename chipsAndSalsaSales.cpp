@@ -7,19 +7,29 @@ int sweetJars;
 int hotJars;
 int zestyJars;
 
+//array for salsa names
 
-int main() {
+const int SIZE = 5;
+int salsaAmounts[SIZE];
 
-cout << "Enter number of mild jars sold";
-cin >> mildJars;
-cout << "Enter number of medium jars sold";
-cin >> mediumJars;
-cout << "Enter number of sweet jars sold";
-cin >> sweetJars;
-cout << "Enter number of hot jars sold";
-cin >> hotJars;
-cout << "Enter number of zesty jars sold";
-cin >> zestyJars;
+int main()
+{
+string salsaNames[5] = {"Mild", "Medium", "Sweet", "Hot", "Zesty"};
+for (int i = 0; i < SIZE; i++)
+{
+     cout << "Enter number of" << salsaNames[i] << "jars sold";
+    cin >> salsaAmounts[i];
+}
+
+   
+    cout << "The sales for each are: ";
+    for (int i : salsaAmounts)
+    {
+       cout << i << endl;
+    }
+    
+
+
 
     return 0;
 }
