@@ -8,37 +8,46 @@ class Tips
 
 private:
     double taxRate = 0.085;
-    double totalBill;
-    double tipRate;
-    double totalTip;
+   
 
 public:
     // tax rate constructor
 
-    Tips(double r)
+    Tips(double rate)
     {
-        taxRate = r;
+        taxRate = rate;
     }
 
     double computeTip(double totalBill, double tipRate)
     {
-        totalTip = totalBill * tipRate;
+        double mealCost = totalBill - (totalBill * taxRate);
+        return mealCost * tipRate;
+        
 
-        return totalTip;
+        
     }
 };
 
 int main()
 {
+    double totalBill;
+    double tipRate;
+    double totalTip;
+    double taxRate;
 
-    cout << "Enter the total bill amount";
-    cin >> totalBill;
 
-    cout << "Enter the tax rate";
+    cout << "Enter the tax rate as a decimal (ex: .05)";
     cin >> taxRate;
 
-    cout << "Enter the tip rate";
+    Tips meal1(taxRate);
+
+    cout << "Enter the total bill amount(tax included)";
+    cin >> totalBill;
+
+    cout << "Enter the tip rate as a decimal (ex: .25)";
     cin >> tipRate;
+
+    meal1.computeTip(totalBill, tipRate);
 
     return 0;
 }
