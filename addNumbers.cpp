@@ -23,6 +23,7 @@ int main()
   return 0;
 }
 
+
 // I used programiz to play around with and make a program that adds any amount of numbers
 // My first mistake was forgetting the semicolons, very important!
 // then I had to edit my pseudocode to have the correct syntax for for loops (initialization; condition; increment)

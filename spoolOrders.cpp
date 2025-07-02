@@ -65,3 +65,4 @@ int main()
     orderTotal = baseSpoolPrice + totalShipping;
     cout << "The order total is " << orderTotal;
 }
+

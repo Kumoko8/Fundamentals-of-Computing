@@ -7,7 +7,7 @@
       "request": "launch",
       "args": [],
       "cwd": "/Users/tAuen/YellowCode/Fundamentals-of-Computing",
-      "program": "/Users/tAuen/YellowCode/Fundamentals-of-Computing/build/Debug/outDebug"
+      "program": "/Users/tAuen/YellowCode/Fundamentals-of-Computing/build/Release/outRelease"
     }
   ]
 }

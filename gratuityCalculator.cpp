@@ -36,7 +36,7 @@ int main()
 
     cout << "Enter the tax rate as a decimal (ex: .05) or enter -99 to exit ";
     cin >> taxRate;
-while(taxRate > 0) {
+while(taxRate >= 0) {
     
     Tips meal1(taxRate);
     
@@ -58,3 +58,6 @@ while(taxRate > 0) {
 cout << "See you next time!";
     return 0;
 }
+
+
+

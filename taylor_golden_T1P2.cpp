@@ -36,6 +36,7 @@ int main()
 
     return 0;
 }
+
 // Output: for 100 80 and 75
 // the average in Farenheit is 85.0
 // the average in Celsius is 29.4
