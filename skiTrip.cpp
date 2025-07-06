@@ -7,24 +7,41 @@ class SkiTrip
 {
 
 private:
-    int date;
-    int inchesSnow;
+    int dates[7];
+    int inchesSnow[7];
     // We want the user to enter a name of the month (July for ex) and a start date in that month (like 14) and then a seven day period end date(which I might just make it startDate + 6) and be able to then enter the day and number of inches for each of the seven days, this means:
     // that the name of the month they set is just for display *
     // the start and end dates shouldn't really affect the objects because the dates should all be real dates, I mean I suppose I could make an array of days of the month so that they choose from it or something so you can't have like Sept 31 but that seems like a lot
     //
 
 public:
-    SkiTrip(int d, int i)
+    SkiTrip()
     {
-        date = d;
-        inchesSnow = i;
+        for (int i = 0; i < 7; i++)
+        {
+            dates[i] = 0;
+            inchesSnow[i] = 0;
+        }
     }
 
     void setSnowfall()
     {
+        for (int i = 0; i < 7; i++)
+        {
+            cout << "Enter date for day" << (i + 1) << endl;
+            cin >> dates[i];
 
-        return;
+            cout << "Enter inches of snow for day" << (i + 1) << endl;
+            cin >> inchesSnow[i];
+        }
+    }
+
+    void displaySnowfall()
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            cout << "Dates: " << dates[i] << "Inches: " << inchesSnow[i] << endl;
+        }
     }
 };
 
@@ -35,9 +52,9 @@ int main()
     int dates[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     int endDate;
     int startDate;
-
     string snowMonth;
     int monthIndex = -1;
+    SkiTrip trip;
 
     while (monthIndex == -1)
     {
@@ -70,7 +87,7 @@ int main()
         cin >> startDate;
     }
 
-    cout << "Enter the end date of the week of snowfall ";
+    cout << "Enter the end date of the week of snowfall (add 6 days) ";
     cin >> endDate;
 
     while (endDate <= 0)
@@ -78,9 +95,10 @@ int main()
         cout << "Invalid end date! Enter valid end date. ";
         cin >> endDate;
     }
+    trip.setSnowfall();
 
     cout << "Snow Report " << snowMonth << " " << startDate << " - " << endDate << endl;
-    cout << dates[monthIndex];
+    trip.displaySnowfall();
 
     return 0;
 }
