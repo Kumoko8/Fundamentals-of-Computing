@@ -112,7 +112,8 @@ int main()
     DayOfYear d1(dayOfYear);
     d1.print();
 
-    do {
+    do
+    {
         cout << "---------------------------- " << endl;
         cout << "Choose another option below " << endl;
         cout << "  [n] Move to the next day " << endl;
@@ -121,22 +122,24 @@ int main()
         cout << "Enter your choice: " << endl;
         cin >> choice;
 
-        if (choice == 'n') {
-            ++d1; 
-            d1.print();// prefix increment
+        if (choice == 'n')
+        {
+            ++d1;
+            d1.print(); // prefix increment
         }
-        else if (choice == 'p') {
+        else if (choice == 'p')
+        {
             --d1;
             d1.print(); // prefix decrement
         }
-        else if (choice != 'q') {
+        else if (choice != 'q')
+        {
             cout << "Invalid input. Try again. " << endl;
         }
 
     } while (choice != 'q');
 
     cout << "Program is complete. Until next time! " << endl;
-
 
     return 0;
 }
